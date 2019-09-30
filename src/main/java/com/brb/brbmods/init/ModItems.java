@@ -4,21 +4,17 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import com.brb.brbmods.BrbMod;
-import com.brb.brbmods.models.item.TorchLeverItem;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.WallOrFloorItem;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
 @SuppressWarnings("unused")
 public final class ModItems {
-	public static final Item TORCH_LEVER = register(new TorchLeverItem(ModBlocks.torch_lever, (new Item.Properties()).group(ItemGroup.DECORATIONS)));
-	
+
+
     static final Map<String, BlockItem> BLOCKS_TO_REGISTER = new LinkedHashMap<>();
 
     private ModItems() {}
@@ -45,7 +41,7 @@ public final class ModItems {
         ForgeRegistries.ITEMS.register(item);
         return item;
     }
-    
+
     public static Item GetBlockItem(String name) {
     	return BLOCKS_TO_REGISTER.get(name);
     }

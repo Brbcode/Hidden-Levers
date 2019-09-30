@@ -1,0 +1,6 @@
+{
+    "parent": "brbmods:block/template_torch_lever_on",
+    "textures": {
+        "torch": "block/torch"
+    }
+}

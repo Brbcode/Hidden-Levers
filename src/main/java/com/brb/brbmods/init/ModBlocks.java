@@ -5,7 +5,6 @@ import javax.annotation.Nullable;
 import com.brb.brbmods.BrbMod;
 import com.brb.brbmods.models.block.FuildBarrierBlock;
 import com.brb.brbmods.models.block.TorchLever;
-import com.brb.brbmods.models.item.TorchLeverItem;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -19,14 +18,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 @SuppressWarnings("unused")
 public final class ModBlocks {
+	public static Block torch_lever = register("torch_lever",ItemGroup.REDSTONE,new TorchLever(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0).lightValue(14).sound(SoundType.WOOD)));
+	public static Block torch_lever_on = register("torch_lever_on",new TorchLever(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0).lightValue(14).sound(SoundType.WOOD)),null);
     public static Block fluidbarrier = register("fluid_barrier_block", new FuildBarrierBlock(Block.Properties.create(Material.BARRIER).hardnessAndResistance(-1.0F, 3600000.8F).noDrops()));
-    public static Block torch_lever = register("torch_lever",new TorchLever(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0).lightValue(14).sound(SoundType.WOOD)),null);
+
 
     private ModBlocks() {}
 
     public static void registerAll(RegistryEvent.Register<Block> event) {
         // Workaround for Forge event bus bug
-        if (!event.getName().equals(ForgeRegistries.BLOCKS.getRegistryName())) return;        
+        if (!event.getName().equals(ForgeRegistries.BLOCKS.getRegistryName())) return;
     }
 
     private static <T extends Block> T register(String name, T block) {
