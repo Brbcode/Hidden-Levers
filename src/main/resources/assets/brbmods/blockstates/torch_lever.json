@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east": { "model": "brbmods:block/torch_lever" },
+        "facing=south": { "model": "brbmods:block/torch_lever", "y": 90 },
+        "facing=west": { "model": "brbmods:block/torch_lever", "y": 180 },
+        "facing=north": { "model": "brbmods:block/torch_lever", "y": 270 }
+    }
+}

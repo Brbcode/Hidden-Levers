@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "brbmods:block/fluid_barrier_block"
+        }
+    }
+}
