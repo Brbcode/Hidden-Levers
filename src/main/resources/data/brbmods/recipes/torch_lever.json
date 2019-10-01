@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+	"C",
+    "X",
+    "#"
+  ],
+  "key": {
+	"C":[
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      },
+	  {
+		"item": "minecraft:torch"
+	  }
+    ],
+    "#": {
+      "item": "minecraft:cobblestone"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "brbmods:torch_lever"
+  }
+}

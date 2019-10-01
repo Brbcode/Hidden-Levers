@@ -19,7 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 @SuppressWarnings("unused")
 public final class ModBlocks {
 	public static Block torch_lever = register("torch_lever",ItemGroup.REDSTONE,new TorchLever(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0).lightValue(14).sound(SoundType.WOOD)));
-	public static Block torch_lever_on = register("torch_lever_on",new TorchLever(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0).lightValue(14).sound(SoundType.WOOD)),null);
+	public static Block torch_lever_on = register("torch_lever_on",new TorchLever(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0).lightValue(14).sound(SoundType.WOOD).lootFrom(ModBlocks.torch_lever)),null);
     public static Block fluidbarrier = register("fluid_barrier_block", new FuildBarrierBlock(Block.Properties.create(Material.BARRIER).hardnessAndResistance(-1.0F, 3600000.8F).noDrops()));
 
 
@@ -28,6 +28,7 @@ public final class ModBlocks {
     public static void registerAll(RegistryEvent.Register<Block> event) {
         // Workaround for Forge event bus bug
         if (!event.getName().equals(ForgeRegistries.BLOCKS.getRegistryName())) return;
+        
     }
 
     private static <T extends Block> T register(String name, T block) {

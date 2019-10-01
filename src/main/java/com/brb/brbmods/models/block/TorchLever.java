@@ -46,7 +46,7 @@ public class TorchLever extends Block{
 	public TorchLever(Properties properties) {
 		super(properties);
 		this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(POWERED, Boolean.valueOf(false)));
-
+		//net.minecraft.block.Blocks
 	}
 
 	@Override
@@ -99,13 +99,15 @@ public class TorchLever extends Block{
 	@OnlyIn(Dist.CLIENT)
 	public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
 		Direction direction = stateIn.get(HORIZONTAL_FACING);
-		double d0 = pos.getX() + 0.5D;
-		double d1 = pos.getY() + 0.7D;
-		double d2 = pos.getZ() + 0.5D;
+		double d0 = pos.getX() + ((stateIn.get(POWERED)) ? 0.5D : 0.5D);
+		double d1 = pos.getY() + ((stateIn.get(POWERED)) ? 0.55D : 0.7D);
+		double d2 = pos.getZ() + ((stateIn.get(POWERED)) ? 0.3D : 0.5D);
 
 		Direction direction1 = direction.getOpposite();
 		worldIn.addParticle(ParticleTypes.SMOKE, d0 + 0.27D * direction1.getXOffset(), d1 + 0.22D, d2 + 0.27D * direction1.getZOffset(), 0.0D, 0.0D, 0.0D);
 		worldIn.addParticle(ParticleTypes.FLAME, d0 + 0.27D * direction1.getXOffset(), d1 + 0.22D, d2 + 0.27D * direction1.getZOffset(), 0.0D, 0.0D, 0.0D);
+		if(stateIn.get(POWERED))
+				worldIn.addParticle(new RedstoneParticleData(1.0F, 0.0F, 0.0F, 1.0F), d0 + 0.27D * direction1.getXOffset(), d1 + 0.22D, d2 + 0.27D * direction1.getZOffset(), 0.0D, 0.0D, 0.0D);
 	}
 
 	@Override
@@ -114,7 +116,7 @@ public class TorchLever extends Block{
 		boolean flag = state.get(POWERED);
 		if (worldIn.isRemote) {
 			if (flag) {
-				addParticles(state, worldIn, pos, 1.0F);
+				addRedstoneParticles(state, worldIn, pos, 1.0F);
 			}
 
 			return true;
@@ -127,7 +129,7 @@ public class TorchLever extends Block{
 		}
 	}
 
-	private static void addParticles(BlockState state, IWorld worldIn, BlockPos pos, float alpha) {
+	private static void addRedstoneParticles(BlockState state, IWorld worldIn, BlockPos pos, float alpha) {
 		Direction direction = state.get(HORIZONTAL_FACING).getOpposite();
 		Direction direction1 = getFacing(state).getOpposite();
 		double d0 = pos.getX() + 0.5D + 0.1D * direction.getXOffset() + 0.2D * direction1.getXOffset();
