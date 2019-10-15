@@ -1,0 +1,39 @@
+{
+    "ambientocclusion": true,
+    "textures": {
+        "particle": "block/bookshelf",
+        "book": "hiddenlevers:block/book",
+		"top": "block/oak_planks",
+		"side": "block/bookshelf",		
+		"side_on": "hiddenlevers:block/bookshelf_trigger_on"
+    },
+    "elements": [
+        {   "from": [ 16, 9, 12 ],
+            "to": [ 13, 13, 10 ],
+			"rotation": { "origin": [ 16, 9, 12 ], "axis": "z", "angle": -45.0 },
+            "faces": {
+                "down":  { "uv": [ 0, 16, 7, 10 ], "texture": "#book" },
+                "up":    { "uv": [ 0, 16, 7, 10 ], "texture": "#book" },
+                "north": { "uv": [ 8, 16, 13, 13 ], "texture": "#book" },
+                "south": { "uv": [ 8, 16, 13, 13 ], "texture": "#book" },
+                "west":  { "uv": [ 0, 0, 2, 5 ], "texture": "#book" },
+                "east":  { "uv": [ 4, 0, 10, 6 ], "texture": "#book" }
+            }
+        },
+		{   "from": [ 0, 0, 0 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#top", "cullface": "down" },
+                "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#top" },
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" },
+                "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side" },
+                "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side_on" }
+            }
+        }
+    ]
+}
+
+
+
+

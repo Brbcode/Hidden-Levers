@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "facing=east,powered=false": { "model": "hiddenlevers:block/torch_lever" },
+        "facing=south,powered=false": { "model": "hiddenlevers:block/torch_lever", "y": 90 },
+        "facing=west,powered=false": { "model": "hiddenlevers:block/torch_lever", "y": 180 },
+        "facing=north,powered=false": { "model": "hiddenlevers:block/torch_lever", "y": 270 },
+		"facing=east,powered=true": { "model": "hiddenlevers:block/torch_lever_on" },
+        "facing=south,powered=true": { "model": "hiddenlevers:block/torch_lever_on", "y": 90 },
+        "facing=west,powered=true": { "model": "hiddenlevers:block/torch_lever_on", "y": 180 },
+        "facing=north,powered=true": { "model": "hiddenlevers:block/torch_lever_on", "y": 270 }
+    }
+}

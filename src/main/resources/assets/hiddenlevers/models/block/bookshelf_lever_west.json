@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+		"particle": "block/bookshelf",
+        "up": "block/oak_planks",
+		"down": "block/oak_planks",
+        "north": "block/bookshelf",
+		"east": "block/bookshelf",
+		"west": "hiddenlevers:block/bookshelf_trigger",
+		"south": "block/bookshelf"
+    }
+}
