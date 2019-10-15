@@ -1,10 +1,10 @@
-package com.brb.brbmods.init;
+package com.brb.hiddenlevers.init;
 
 import javax.annotation.Nullable;
 
-import com.brb.brbmods.BrbMod;
-import com.brb.brbmods.models.block.FuildBarrierBlock;
-import com.brb.brbmods.models.block.TorchLever;
+import com.brb.hiddenlevers.BrbMod;
+import com.brb.hiddenlevers.models.block.BookLever;
+import com.brb.hiddenlevers.models.block.TorchLever;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -20,15 +20,21 @@ import net.minecraftforge.registries.ForgeRegistries;
 public final class ModBlocks {
 	public static Block torch_lever = register("torch_lever",ItemGroup.REDSTONE,new TorchLever(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0).lightValue(14).sound(SoundType.WOOD)));
 	public static Block torch_lever_on = register("torch_lever_on",new TorchLever(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0).lightValue(14).sound(SoundType.WOOD).lootFrom(ModBlocks.torch_lever)),null);
-    public static Block fluidbarrier = register("fluid_barrier_block", new FuildBarrierBlock(Block.Properties.create(Material.BARRIER).hardnessAndResistance(-1.0F, 3600000.8F).noDrops()));
-
+	public static final Block bookshelf_lever = register("bookshelf_lever",ItemGroup.REDSTONE, new BookLever(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.5F).sound(SoundType.WOOD)));
+	public static final Block bookshelf_lever_east = register("bookshelf_lever_east", new BookLever(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.5F).sound(SoundType.WOOD).lootFrom(ModBlocks.bookshelf_lever)),null);
+	public static final Block bookshelf_lever_west = register("bookshelf_lever_west", new BookLever(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.5F).sound(SoundType.WOOD).lootFrom(ModBlocks.bookshelf_lever)),null);
+	public static final Block bookshelf_lever_south = register("bookshelf_lever_south", new BookLever(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.5F).sound(SoundType.WOOD).lootFrom(ModBlocks.bookshelf_lever)),null);
+	public static final Block bookshelf_lever_on = register("bookshelf_lever_on", new BookLever(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.5F).sound(SoundType.WOOD).lootFrom(ModBlocks.bookshelf_lever)),null);
+	public static final Block bookshelf_lever_east_on = register("bookshelf_lever_east_on", new BookLever(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.5F).sound(SoundType.WOOD).lootFrom(ModBlocks.bookshelf_lever)),null);
+	public static final Block bookshelf_lever_west_on = register("bookshelf_lever_west_on", new BookLever(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.5F).sound(SoundType.WOOD).lootFrom(ModBlocks.bookshelf_lever)),null);
+	public static final Block bookshelf_lever_south_on = register("bookshelf_lever_south_on", new BookLever(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.5F).sound(SoundType.WOOD).lootFrom(ModBlocks.bookshelf_lever)),null);
 
     private ModBlocks() {}
 
     public static void registerAll(RegistryEvent.Register<Block> event) {
         // Workaround for Forge event bus bug
         if (!event.getName().equals(ForgeRegistries.BLOCKS.getRegistryName())) return;
-        
+
     }
 
     private static <T extends Block> T register(String name, T block) {

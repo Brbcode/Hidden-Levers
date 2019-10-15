@@ -1,6 +1,6 @@
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-package com.brb.brbmods.init;
+package com.brb.hiddenlevers.init;
 
 import mcp.MethodsReturnNonnullByDefault;
 

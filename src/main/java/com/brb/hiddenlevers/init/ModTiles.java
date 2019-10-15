@@ -1,9 +1,7 @@
-package com.brb.brbmods.init;
+package com.brb.hiddenlevers.init;
 
 
 import java.util.function.Supplier;
-
-import com.brb.brbmods.models.tiles.FuildBarrierTile;
 
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
@@ -14,7 +12,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModTiles {
 
-	public static TileEntityType<FuildBarrierTile> FLUID_BARRIER_TILE = register("fluid_barrier_block",FuildBarrierTile::new,ModBlocks.fluidbarrier);
 
 
 	public static void registerAll(RegistryEvent.Register<TileEntityType<?>> event) {

@@ -1,9 +1,9 @@
-package com.brb.brbmods.init;
+package com.brb.hiddenlevers.init;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import com.brb.brbmods.BrbMod;
+import com.brb.hiddenlevers.BrbMod;
 
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;

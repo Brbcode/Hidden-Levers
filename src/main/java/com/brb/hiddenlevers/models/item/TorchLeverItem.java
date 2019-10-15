@@ -1,4 +1,4 @@
-package com.brb.brbmods.models.item;
+package com.brb.hiddenlevers.models.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;

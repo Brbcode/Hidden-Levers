@@ -1,6 +1,6 @@
-package com.brb.brbmods.init;
+package com.brb.hiddenlevers.init;
 
-import com.brb.brbmods.BrbMod;
+import com.brb.hiddenlevers.BrbMod;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
