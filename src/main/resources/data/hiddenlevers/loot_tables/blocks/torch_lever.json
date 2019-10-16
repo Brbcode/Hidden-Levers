@@ -6,12 +6,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbmods:torch_lever"
+          "name": "hiddenlevers:torch_lever"
         }
       ],
       "conditions": [
         {
-          "condition": "minecraft:survives_explosion"
+          
         }
       ]
     }
