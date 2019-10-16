@@ -4,7 +4,7 @@ This  mod adds two new hidden levers:
  * Torch lever (Horizontal only)
  * Bookshelf lever (Only activates on correct face, the texture is slightly different)
 
-[![Watch the video]()
+[![Watch the video](https://raw.githubusercontent.com/Brbcode/Hidden-Levers/master/git%20images/thumbnail.png)](https://www.youtube.com/watch?v=5iZntta7ERI)
 
 ## Getting Started
 Build your Torch lever with a vertical line of [cobblestone](https://minecraft.gamepedia.com/Cobblestone),[stick](https://minecraft.gamepedia.com/Stick) and one of the following items:
